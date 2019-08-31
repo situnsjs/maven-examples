@@ -1,7 +1,7 @@
 node {
    
    stage('Code Checkout') { 
-     git credentialsId: 'githubID', url: 'https://github.com/itrainjaquar/maven-examples.git'
+     git credentialsId: 'githubID', url: 'https://github.com/situnsjs/maven-examples.git'
      
     }
    stage('Build') {
@@ -18,9 +18,9 @@ node {
      withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.0') {
       sh 'mvn sonar:sonar \
          -Dsonar.projectKey=maven-example-jaquar \
-         -Dsonar.organization=itrainjaquar \
+         -Dsonar.organization=situnsjs_ITrainmyself \
          -Dsonar.host.url=https://sonarcloud.io \
-         -Dsonar.login=a1ae186fecf5178de96c71dc9d50a416ac125e5e'  
+         -Dsonar.login=f34e20399daf8cb714ba0a54f8f368d6fcfc211c'  
        }  
     }
   stage("Quality Gate"){
