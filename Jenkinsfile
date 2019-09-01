@@ -17,10 +17,10 @@ node {
    stage('Sonarqube analysis'){
      withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.0') {
       sh 'mvn sonar:sonar \
-         -Dsonar.projectKey=maven-example-jaquar \
-         -Dsonar.organization=situnsjs_ITrainmyself \
+         -Dsonar.projectKey=situnsjs_ITrainmyself \
+         -Dsonar.organization=situnsjs \
          -Dsonar.host.url=https://sonarcloud.io \
-         -Dsonar.login=f34e20399daf8cb714ba0a54f8f368d6fcfc211c'  
+         -Dsonar.login=f34e20399daf8cb714ba0a54f8f368d6fcfc211c '  
        }  
     }
   stage("Quality Gate"){
