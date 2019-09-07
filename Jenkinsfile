@@ -11,14 +11,14 @@ node {
     //withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.0') {
       //sh 'mvn clean compile'
        rtMaven.tool = 'Maven-3.6.0'
-       rtMaven.run pom: 'pom.xml', goals: 'clean compile'
+       rtMaven.run pom: 'pom.xml', goals: 'clean compile test'
       //}
     }
    stage('Unit Test run') {
     //withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.0') {
      //sh 'mvn test'
-       rtMaven.tool = 'Maven-3.6.0'
-       rtMaven.run pom: 'pom.xml', goals: 'test'
+      // rtMaven.tool = 'Maven-3.6.0'
+      // rtMaven.run pom: 'pom.xml', goals: 'test'
       //} 
     }
    stage('Sonarqube analysis'){
