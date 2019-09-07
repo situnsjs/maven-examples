@@ -1,6 +1,4 @@
 node {
-   
-  node {
     def server = Artifactory.server('situnsjs.jfrog.io')
     def buildInfo = Artifactory.newBuildInfo()
     def rtMaven = Artifactory.newMavenBuild()
