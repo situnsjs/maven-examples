@@ -1,10 +1,10 @@
 node {
-    def server = Artifactory.server('saritha.jfrog.io')
+    def server = Artifactory.server('situnsjs.jfrog.io')
     def buildInfo = Artifactory.newBuildInfo()
     def rtMaven = Artifactory.newMavenBuild()
    
    stage('Code Checkout') { 
-     git credentialsId: 'githubID', url: 'https://github.com/itrainjaquar/maven-examples.git'
+     git credentialsId: 'githubID', url: 'https://github.com/situnsjs/maven-examples.git'
      
     }
    stage('Build') {
@@ -25,9 +25,9 @@ node {
       //withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
       //    sh 'mvn sonar:sonar \
         //  -Dsonar.projectKey=maven-example-jaquar \
-          //-Dsonar.organization=itrainjaquar \
+          //-Dsonar.organization=situnsjs_ITrainmyself \
           //-Dsonar.host.url=https://sonarcloud.io \
-          //-Dsonar.login=059cb525c6367049212917d911e5f503300e980e
+          //-Dsonar.login=f34e20399daf8cb714ba0a54f8f368d6fcfc211c
     
       //}
   }
