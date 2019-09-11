@@ -17,13 +17,13 @@ node {
    stage('Unit Test run') {
     //withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.0') {
      //sh 'mvn test'
-      // rtMaven.tool = 'Maven-3.6.0'
-      // rtMaven.run pom: 'pom.xml', goals: 'test'
-      //} 
+       rtMaven.tool = 'Maven-3.6.0'
+       rtMaven.run pom: 'pom.xml', goals: 'test'
+      // } 
     }
    stage('Sonarqube analysis'){
-      //withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
-      //    sh 'mvn sonar:sonar \
+       withMaven(jdk: 'JDK-1.8', maven: 'Maven-3.6.1') {
+          sh 'mvn sonar:sonar \
         //  -Dsonar.projectKey=maven-example-jaquar \
           //-Dsonar.organization=situnsjs \
           //-Dsonar.host.url=https://sonarcloud.io \
