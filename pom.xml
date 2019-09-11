@@ -37,6 +37,11 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M1</version>
             </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.6.0.1398</version>
+           </plugin>
 
             <plugin>
                 <groupId>org.jacoco</groupId>
@@ -56,7 +61,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>jacoco-check</id>
+                        <id>default-jacoco-check</id>
                         <goals>
                             <goal>check</goal>
                         </goals>
